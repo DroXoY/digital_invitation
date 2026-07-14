@@ -264,6 +264,7 @@ h4 {
     gap: 40px;
     /* Jarak antara atas dan bawah di desktop */
     transform: translateY(-4vh);
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 0 0 4px rgba(255, 255, 255, 1);
 }
 
 /* Penyesuaian khusus mobile (layar kecil) */
@@ -279,8 +280,9 @@ h4 {
 
 .gate-subtitle {
     font-size: 1rem;
+    font-weight: 700;
     letter-spacing: 3px;
-    color: var(--text-muted);
+    color: black;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
@@ -379,12 +381,14 @@ h1.gate-title:last-of-type {
     position: relative;
     z-index: 1;
     padding: 2rem;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 0 0 4px rgba(255, 255, 255, 1);
 }
 
 .hero-subtitle {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 700;
     letter-spacing: 4px;
-    color: var(--text-muted);
+    color: black;
     margin-bottom: 15px;
 }
 
