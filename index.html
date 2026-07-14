@@ -22,7 +22,7 @@
 
     <!-- Audio Element -->
     <audio id="bg-music" loop>
-        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+        <source src="A Thousand Years.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Music Control Button -->
@@ -34,50 +34,55 @@
     <section id="gate" class="gate-page">
         <div class="gate-overlay"></div>
         <div class="gate-content">
-            <div class="diamond-badge-wrapper">
-                <div class="diamond-badge-container">
-                    <div class="diamond-badge-ring anim-spin"></div>
-                    <div class="diamond-badge-inner anim-spin-reverse">
-                        <div class="diamond-badge-dot-container"
-                            style="transform: rotate(0deg) translateX(24px) translateY(-50%);">
-                            <div class="diamond-badge-dot"></div>
+            <div class="gate-top">
+                <div class="diamond-badge-wrapper">
+                    <div class="diamond-badge-container">
+                        <div class="diamond-badge-ring anim-spin"></div>
+                        <div class="diamond-badge-inner anim-spin-reverse">
+                            <div class="diamond-badge-dot-container"
+                                style="transform: rotate(0deg) translateX(24px) translateY(-50%);">
+                                <div class="diamond-badge-dot"></div>
+                            </div>
+                            <div class="diamond-badge-dot-container"
+                                style="transform: rotate(90deg) translateX(24px) translateY(-50%);">
+                                <div class="diamond-badge-dot"></div>
+                            </div>
+                            <div class="diamond-badge-dot-container"
+                                style="transform: rotate(180deg) translateX(24px) translateY(-50%);">
+                                <div class="diamond-badge-dot"></div>
+                            </div>
+                            <div class="diamond-badge-dot-container"
+                                style="transform: rotate(270deg) translateX(24px) translateY(-50%);">
+                                <div class="diamond-badge-dot"></div>
+                            </div>
                         </div>
-                        <div class="diamond-badge-dot-container"
-                            style="transform: rotate(90deg) translateX(24px) translateY(-50%);">
-                            <div class="diamond-badge-dot"></div>
+                        <!-- Core Diamond -->
+                        <div class="diamond-badge-core">
+                            <svg width="24" height="28" viewBox="0 0 24 28" fill="none">
+                                <polygon points="12,0 24,8 24,8 12,28 0,8 0,8" fill="#3A3C4E" opacity=".85"></polygon>
+                                <polygon points="12,0 24,8 12,10 0,8" fill="rgba(255,255,255,0.45)"></polygon>
+                                <polygon points="0,8 12,10 12,28" fill="rgba(80,85,110,0.25)"></polygon>
+                                <polygon points="24,8 12,10 12,28" fill="rgba(255,255,255,0.18)"></polygon>
+                                <line x1="0" y1="8" x2="24" y2="8" stroke="rgba(255,255,255,0.6)" stroke-width=".8">
+                                </line>
+                            </svg>
                         </div>
-                        <div class="diamond-badge-dot-container"
-                            style="transform: rotate(180deg) translateX(24px) translateY(-50%);">
-                            <div class="diamond-badge-dot"></div>
-                        </div>
-                        <div class="diamond-badge-dot-container"
-                            style="transform: rotate(270deg) translateX(24px) translateY(-50%);">
-                            <div class="diamond-badge-dot"></div>
-                        </div>
-                    </div>
-                    <!-- Core Diamond -->
-                    <div class="diamond-badge-core">
-                        <svg width="24" height="28" viewBox="0 0 24 28" fill="none">
-                            <polygon points="12,0 24,8 24,8 12,28 0,8 0,8" fill="#3A3C4E" opacity=".85"></polygon>
-                            <polygon points="12,0 24,8 12,10 0,8" fill="rgba(255,255,255,0.45)"></polygon>
-                            <polygon points="0,8 12,10 12,28" fill="rgba(80,85,110,0.25)"></polygon>
-                            <polygon points="24,8 12,10 12,28" fill="rgba(255,255,255,0.18)"></polygon>
-                            <line x1="0" y1="8" x2="24" y2="8" stroke="rgba(255,255,255,0.6)" stroke-width=".8"></line>
-                        </svg>
                     </div>
                 </div>
+
+                <h3 class="gate-subtitle">THE 60TH WEDDING ANNIVERSARY</h3>
+                <h1 class="gate-title">Liem Ping Tien</h1>
+                <h1 class="gate-title">&</h1>
+                <h1 class="gate-title">Tan Mei Hwa</h1>
             </div>
 
-            <h3 class="gate-subtitle">THE 60TH WEDDING ANNIVERSARY</h3>
-            <h1 class="gate-title">Liem Ping Tien</h1>
-            <h1 class="gate-title">&</h1>
-            <h1 class="gate-title">Tan Mei Hwa</h1>
-
-            <button id="open-invitation" class="btn-primary">
-                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(105deg,transparent 25%,rgba(255,255,255,0.7) 50%,transparent 75%);"
-                    class="shimmer-sweep"></div>
-                <span style="position: relative; z-index: 2;">Open Invitation</span>
-            </button>
+            <div class="gate-bottom">
+                <button id="open-invitation" class="btn-primary">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(105deg,transparent 25%,rgba(255,255,255,0.7) 50%,transparent 75%);"
+                        class="shimmer-sweep"></div>
+                    <span style="position: relative; z-index: 2;">Open Invitation</span>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -89,9 +94,18 @@
             <div class="hero-overlay"></div>
             <div class="hero-content" data-aos="fade-up">
                 <h3 class="hero-subtitle">THE 60TH WEDDING ANNIVERSARY</h3>
-                <h1 class="hero-title">Liem Ping Tien & Tan Mei Hwa</h1>
+                <h1 class="hero-title">Liem Ping Tien</h1>
+                <h1 class="hero-title">&</h1>
+                <h1 class="hero-title">Tan Mei Hwa</h1>
                 <p class="hero-date">SUNDAY, 09 AUGUST 2026</p>
-                <p class="hero-quote">"I have found the one whom my soul loves."<br><span>(Song of Solomon 3:4)</span>
+                <p class="hero-quote" style="line-height: 1.8;">
+                    <strong>60 years of togetherness,</strong><br>
+                    720 months of laughter,<br>
+                    21,915 days of friendship,<br>
+                    and over 31 million minutes of<br>
+                    <span
+                        style="font-size: 2rem; font-family: var(--font-heading); font-style: italic; color: var(--accent); font-weight: normal;">Everlasting
+                        Love</span>
                 </p>
             </div>
         </section>
@@ -160,7 +174,8 @@
             <section class="events-section">
                 <div class="event-card slide-up-anim">
                     <h2 class="section-title">INTIMATE DINNER</h2>
-                    <p class="event-date">SUNDAY, 09 AUGUST 2026, 18.00 PM</p>
+                    <p class="event-date">SUNDAY, 09 AUGUST 2026</p>
+                    <p class="event-date">18.00 PM</p>
                     <h3 class="event-venue">Tristar Restaurant</h3>
                     <p class="event-address">Jl. Ps. Besar Wetan No.14, RW.16, Alun-alun Contong, Kec. Bubutan,
                         Surabaya, Jawa Timur 60174</p>
@@ -189,7 +204,11 @@
                         <span class="timer-label">Seconds</span>
                     </div>
                 </div>
-                <a href="#" class="btn-primary" style="margin-top: 2rem;">Save the date</a>
+                <a href="#" class="btn-primary" style="margin-top: 2rem;">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(105deg,transparent 25%,rgba(255,255,255,0.7) 50%,transparent 75%);"
+                        class="shimmer-sweep"></div>
+                    <span style="position: relative; z-index: 2;">Save the date</span>
+                </a>
             </section>
 
             <!-- RSVP & Wishes -->
@@ -212,7 +231,11 @@
                             <label><input type="radio" name="attendance" value="yes" checked> Yes, I will attend</label>
                             <label><input type="radio" name="attendance" value="no"> Sorry, I can't attend</label>
                         </div>
-                        <button type="submit" class="btn-primary w-100">Send RSVP</button>
+                        <button type="submit" class="btn-primary w-100">
+                            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(105deg,transparent 25%,rgba(255,255,255,0.7) 50%,transparent 75%);"
+                                class="shimmer-sweep"></div>
+                            <span style="position: relative; z-index: 2;">Send RSVP</span>
+                        </button>
                     </form>
 
                     <hr class="divider">
@@ -224,7 +247,11 @@
                         <div class="form-group">
                             <textarea id="wish-text" placeholder="Write your wishes..." rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="btn-primary w-100">Submit Wish</button>
+                        <button type="submit" class="btn-primary w-100">
+                            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(105deg,transparent 25%,rgba(255,255,255,0.7) 50%,transparent 75%);"
+                                class="shimmer-sweep"></div>
+                            <span style="position: relative; z-index: 2;">Submit Wish</span>
+                        </button>
                     </form>
 
                     <div class="wishes-list" id="wishes-list">
@@ -242,14 +269,12 @@
             <section class="gallery-section slide-up-anim">
                 <h2 class="section-title text-center">OUR GALLERY</h2>
                 <div class="gallery-grid">
-                    <img src="images/cover_image_1784000238974.png" alt="Gallery 1" class="gallery-item"
-                        onclick="openModal(this.src)">
-                    <img src="images/hero_image_1784000252753.png" alt="Gallery 2" class="gallery-item"
-                        onclick="openModal(this.src)">
-                    <img src="images/kakek_profile_1784000268439.png" alt="Gallery 3" class="gallery-item"
-                        onclick="openModal(this.src)">
-                    <img src="images/nenek_profile_1784000277716.png" alt="Gallery 4" class="gallery-item"
-                        onclick="openModal(this.src)">
+                    <img src="images/1.jpeg" alt="Gallery 1" class="gallery-item" onclick="openModal(this.src)">
+                    <img src="images/2.jpeg" alt="Gallery 2" class="gallery-item" onclick="openModal(this.src)">
+                    <img src="images/3.jpeg" alt="Gallery 3" class="gallery-item" onclick="openModal(this.src)">
+                    <img src="images/4.jpeg" alt="Gallery 4" class="gallery-item" onclick="openModal(this.src)">
+                    <img src="images/5.jpeg" alt="Gallery 5" class="gallery-item" onclick="openModal(this.src)">
+                    <img src="images/6.jpeg" alt="Gallery 6" class="gallery-item" onclick="openModal(this.src)">
                 </div>
             </section>
 
@@ -263,7 +288,7 @@
             <p class="footer-sign">Best Regards,<br><strong>Liem Ping Tien & Tan Mei Hwa</strong></p>
 
             <div class="copyright">
-                <p>MADE BY <span><i class="fas fa-heart"></i> M.I.</span></p>
+                <p>MADE BY <span><i class="fas fa-heart"></i> Michael</span></p>
             </div>
         </footer>
 

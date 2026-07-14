@@ -232,7 +232,7 @@ h4 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('images/cover_image_1784000238974.png') no-repeat center center/cover;
+    background: url('images/cover_depan1.png') no-repeat center center/cover;
     z-index: 10000;
     display: flex;
     justify-content: center;
@@ -247,16 +247,34 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(158deg, rgba(255, 255, 255, 0.7) 0%, rgba(240, 242, 248, 0.8) 100%);
-    backdrop-filter: blur(4px);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(216, 220, 240, 1) 100%);
+    backdrop-filter: blur(1px);
 }
 
 .gate-content {
     position: relative;
     z-index: 1;
+    width: 100%;
     max-width: 600px;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    /* Jarak antara atas dan bawah di desktop */
     transform: translateY(-4vh);
+}
+
+/* Penyesuaian khusus mobile (layar kecil) */
+@media (max-width: 768px) {
+    .gate-content {
+        height: 100%;
+        padding: 12vh 2rem 8vh 2rem;
+        justify-content: space-between;
+        gap: 0;
+        transform: translateY(0);
+    }
 }
 
 .gate-subtitle {
@@ -270,7 +288,7 @@ h4 {
 .gate-title {
     font-size: 3.5rem;
     margin-bottom: 0;
-    color: var(--text-main);
+    color: black;
     line-height: 1.2;
 }
 
@@ -282,7 +300,21 @@ h1.gate-title:nth-of-type(2) {
 }
 
 h1.gate-title:last-of-type {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.gate-guest-label {
+    font-size: 0.9rem;
+    color: black;
+    margin-bottom: 5px;
+    font-family: var(--font-body);
+}
+
+.gate-guest-name {
+    font-size: 1.5rem;
+    color: black;
+    font-family: var(--font-heading);
+    margin-bottom: 25px;
 }
 
 /* Slide up animation class for gate */
@@ -330,7 +362,7 @@ h1.gate-title:last-of-type {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('images/hero_image_1784000252753.png') no-repeat center top/cover;
+    background: url('images/hero-gambar.png') no-repeat center top/cover;
     background-attachment: fixed;
 }
 
@@ -358,8 +390,22 @@ h1.gate-title:last-of-type {
 
 .hero-title {
     font-size: 4rem;
+    margin-bottom: 0;
+    font-family: var(--font-heading);
+    color: black;
+    line-height: 1.2;
+}
+
+h1.hero-title:nth-of-type(2) {
+    font-size: 3rem;
+    font-style: italic;
+    color: black;
+    /* Keep it white for the hero banner */
+    margin: 5px 0;
+}
+
+h1.hero-title:last-of-type {
     margin-bottom: 20px;
-    color: var(--text-main);
 }
 
 .hero-date {
@@ -492,7 +538,7 @@ h1.gate-title:last-of-type {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-family: var(--font-body);
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     color: var(--text-muted);
     text-align: center;
     font-weight: 600;

@@ -96,6 +96,14 @@ const observer = new IntersectionObserver((entries, observer) => {
 document.addEventListener('DOMContentLoaded', () => {
     const animElements = document.querySelectorAll('.slide-up-anim');
     animElements.forEach(el => observer.observe(el));
+
+    // Set guest name from URL parameter if available (?to=Guest+Name)
+    const urlParams = new URLSearchParams(window.location.search);
+    const guestName = urlParams.get('to');
+    if (guestName) {
+        const guestNameEl = document.getElementById('guest-name');
+        if (guestNameEl) guestNameEl.innerText = guestName;
+    }
 });
 
 // Gallery Modal functions
