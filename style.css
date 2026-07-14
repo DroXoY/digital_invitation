@@ -477,10 +477,15 @@ h1.hero-title:last-of-type {
     color: var(--text-muted);
 }
 
-.profile-bg-left,
+.profile-bg-left {
+    flex: 1;
+    background: url('images/6-1.jpg') no-repeat center center/cover;
+    min-height: 300px;
+}
+
 .profile-bg-right {
     flex: 1;
-    background: url('images/cover_image_1784000238974.png') no-repeat center center/cover;
+    background: url('images/5.jpg') no-repeat center center/cover;
     min-height: 300px;
 }
 
@@ -808,49 +813,80 @@ h1.hero-title:last-of-type {
     }
 }
 
-/* Footer */
-.footer-section {
+/* Thank You Section */
+.thank-you-section {
+    position: relative;
     text-align: center;
-    padding: 4rem 20px 2rem;
-    background: linear-gradient(to top, rgba(216, 220, 240, 1) 0%, transparent 100%);
+    padding: 20px;
+    width: 100%;
+    aspect-ratio: 1371 / 1026;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('images/1.jpg') no-repeat center center/cover;
+    color: white;
 }
 
-.footer-title {
+.thank-you-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65); /* Dark overlay */
+    z-index: 1;
+}
+
+.thank-you-title,
+.thank-you-text,
+.thank-you-sign {
+    position: relative;
+    z-index: 2;
+}
+
+.thank-you-title {
     font-size: 3rem;
-    color: var(--accent);
+    color: white;
     margin-bottom: 20px;
 }
 
-.footer-text {
+.thank-you-text {
     max-width: 500px;
     margin: 0 auto 30px;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.9);
 }
 
-.footer-sign {
+.thank-you-sign {
     font-size: 1.1rem;
-    margin-bottom: 40px;
-    color: var(--text-main);
+    color: rgba(255, 255, 255, 0.9);
 }
 
-.footer-sign strong {
+.thank-you-sign strong {
     font-family: var(--font-heading);
     font-size: 1.8rem;
     display: block;
     margin-top: 10px;
-    color: var(--text-dark);
+    color: white;
+}
+
+/* Footer (Copyright) */
+.footer-section {
+    text-align: center;
+    padding: 2rem 20px;
+    background: var(--bg-dark);
 }
 
 .copyright {
-    border-top: 1px solid var(--c-border);
-    padding-top: 20px;
     font-size: 0.8rem;
     color: var(--text-muted);
     letter-spacing: 2px;
 }
 
-.copyright i {
-    color: var(--accent);
+.copyright span {
+    color: var(--text-main);
+    font-weight: 600;
 }
 
 /* Animations */

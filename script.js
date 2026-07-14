@@ -46,7 +46,21 @@ musicToggle.addEventListener('click', () => {
         isPlaying = true;
         musicToggle.classList.add('playing');
         musicIcon.classList.remove('fa-music');
+        musicIcon.classList.remove('fa-music');
         musicIcon.classList.add('fa-compact-disc');
+    }
+});
+
+// Auto pause music when tab is inactive/hidden
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        if (isPlaying) {
+            bgMusic.pause();
+        }
+    } else {
+        if (isPlaying) {
+            bgMusic.play().catch(e => console.log(e));
+        }
     }
 });
 
