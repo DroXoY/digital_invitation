@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60th Wedding Anniversary - Liem Ping Tien & Tan Mei Hwa</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Audio Element -->
+    <audio id="bg-music" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Control Button -->
+    <button id="music-toggle" class="music-btn">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <!-- Gate / Cover Page -->
+    <section id="gate" class="gate-page">
+        <div class="gate-overlay"></div>
+        <div class="gate-content">
+            <div class="diamond-badge-wrapper">
+                <div class="diamond-badge-container">
+                    <div class="diamond-badge-ring anim-spin"></div>
+                    <div class="diamond-badge-inner anim-spin-reverse">
+                        <div class="diamond-badge-dot-container"
+                            style="transform: rotate(0deg) translateX(24px) translateY(-50%);">
+                            <div class="diamond-badge-dot"></div>
+                        </div>
+                        <div class="diamond-badge-dot-container"
+                            style="transform: rotate(90deg) translateX(24px) translateY(-50%);">
+                            <div class="diamond-badge-dot"></div>
+                        </div>
+                        <div class="diamond-badge-dot-container"
+                            style="transform: rotate(180deg) translateX(24px) translateY(-50%);">
+                            <div class="diamond-badge-dot"></div>
+                        </div>
+                        <div class="diamond-badge-dot-container"
+                            style="transform: rotate(270deg) translateX(24px) translateY(-50%);">
+                            <div class="diamond-badge-dot"></div>
+                        </div>
+                    </div>
+                    <!-- Core Diamond -->
+                    <div class="diamond-badge-core">
+                        <svg width="24" height="28" viewBox="0 0 24 28" fill="none">
+                            <polygon points="12,0 24,8 24,8 12,28 0,8 0,8" fill="#3A3C4E" opacity=".85"></polygon>
+                            <polygon points="12,0 24,8 12,10 0,8" fill="rgba(255,255,255,0.45)"></polygon>
+                            <polygon points="0,8 12,10 12,28" fill="rgba(80,85,110,0.25)"></polygon>
+                            <polygon points="24,8 12,10 12,28" fill="rgba(255,255,255,0.18)"></polygon>
+                            <line x1="0" y1="8" x2="24" y2="8" stroke="rgba(255,255,255,0.6)" stroke-width=".8"></line>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="gate-subtitle">THE 60TH WEDDING ANNIVERSARY</h3>
+            <h1 class="gate-title">Liem Ping Tien</h1>
+            <h1 class="gate-title">&</h1>
+            <h1 class="gate-title">Tan Mei Hwa</h1>
+
+            <button id="open-invitation" class="btn-primary">
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(105deg,transparent 25%,rgba(255,255,255,0.7) 50%,transparent 75%);"
+                    class="shimmer-sweep"></div>
+                <span style="position: relative; z-index: 2;">Open Invitation</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" class="hidden-content">
+
+        <!-- Hero Banner -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content" data-aos="fade-up">
+                <h3 class="hero-subtitle">THE 60TH WEDDING ANNIVERSARY</h3>
+                <h1 class="hero-title">Liem Ping Tien & Tan Mei Hwa</h1>
+                <p class="hero-date">SUNDAY, 09 AUGUST 2026</p>
+                <p class="hero-quote">"I have found the one whom my soul loves."<br><span>(Song of Solomon 3:4)</span>
+                </p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Profiles Section -->
+            <section class="profiles-section">
+                <!-- Kakek Profile -->
+                <div class="profile-card slide-up-anim">
+                    <div class="profile-bg-left"></div>
+                    <div class="profile-details">
+                        <img src="images/kakek_profile_1784000268439.png" alt="Kakek" class="profile-img">
+                        <h2 class="profile-name">Liem Ping Tien</h2>
+                        <p class="profile-parents">Putra dari Bpk. (Nama) & Ibu (Nama)</p>
+                    </div>
+                </div>
+
+                <!-- Nenek Profile -->
+                <div class="profile-card reverse slide-up-anim">
+                    <div class="profile-bg-right"></div>
+                    <div class="profile-details">
+                        <img src="images/nenek_profile_1784000277716.png" alt="Nenek" class="profile-img">
+                        <h2 class="profile-name">Tan Mei Hwa</h2>
+                        <p class="profile-parents">Putri dari Bpk. (Nama) & Ibu (Nama)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section slide-up-anim">
+                <p class="stats-message">
+                    With love, our children, grandchildren,<br>and great-grandchildren
+                </p>
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <div class="stat-item-inner">
+                            <span class="stat-number">1966</span>
+                            <span class="stat-label">Married</span>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-item-inner">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Children</span>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-item-inner">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Grandkids</span>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-item-inner">
+                            <span class="stat-number">60</span>
+                            <span class="stat-label">Years</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section class="events-section">
+                <div class="event-card slide-up-anim">
+                    <h2 class="section-title">INTIMATE DINNER</h2>
+                    <p class="event-date">SUNDAY, 09 AUGUST 2026, 18.00 PM</p>
+                    <h3 class="event-venue">Tristar Restaurant</h3>
+                    <p class="event-address">Jl. Ps. Besar Wetan No.14, RW.16, Alun-alun Contong, Kec. Bubutan,
+                        Surabaya, Jawa Timur 60174</p>
+                    <a href="https://maps.app.goo.gl/jXg1veh88xv3QV199" class="btn-secondary">GOOGLE MAPS</a>
+                </div>
+            </section>
+
+            <!-- Countdown Timer -->
+            <section class="countdown-section slide-up-anim">
+                <h2 class="section-title">COUNTDOWN TIMER</h2>
+                <div class="timer-container" id="countdown">
+                    <div class="timer-box">
+                        <span id="days" class="timer-num">00</span>
+                        <span class="timer-label">Days</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="hours" class="timer-num">00</span>
+                        <span class="timer-label">Hours</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="minutes" class="timer-num">00</span>
+                        <span class="timer-label">Minutes</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="seconds" class="timer-num">00</span>
+                        <span class="timer-label">Seconds</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-primary" style="margin-top: 2rem;">Save the date</a>
+            </section>
+
+            <!-- RSVP & Wishes -->
+            <section class="rsvp-section slide-up-anim">
+                <div class="rsvp-card">
+                    <h2 class="section-title">RSVP & WISHES</h2>
+
+                    <form class="rsvp-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>Number of Guest</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Persons</option>
+                            </select>
+                        </div>
+                        <div class="form-group radio-group">
+                            <label><input type="radio" name="attend" value="yes" checked> Yes, I will attend</label>
+                            <label><input type="radio" name="attend" value="no"> Sorry, I can't attend</label>
+                        </div>
+                        <button type="submit" class="btn-primary w-100">Send RSVP</button>
+                    </form>
+
+                    <hr class="divider">
+
+                    <form class="wishes-form" onsubmit="addWish(event)">
+                        <div class="form-group">
+                            <input type="text" id="wish-name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="wish-msg" placeholder="Write your wishes..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-100">Submit Wish</button>
+                    </form>
+
+                    <div class="wishes-list" id="wishes-list">
+                        <!-- Wishes will be appended here -->
+                        <div class="wish-item">
+                            <h4>Keluarga Besar</h4>
+                            <p>Happy 60th Anniversary Kakek & Nenek! Semoga sehat selalu dan bahagia selamanya.</p>
+                            <span class="wish-time">Just now</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section class="gallery-section slide-up-anim">
+                <h2 class="section-title text-center">OUR GALLERY</h2>
+                <div class="gallery-grid">
+                    <img src="images/cover_image_1784000238974.png" alt="Gallery 1" class="gallery-item"
+                        onclick="openModal(this.src)">
+                    <img src="images/hero_image_1784000252753.png" alt="Gallery 2" class="gallery-item"
+                        onclick="openModal(this.src)">
+                    <img src="images/kakek_profile_1784000268439.png" alt="Gallery 3" class="gallery-item"
+                        onclick="openModal(this.src)">
+                    <img src="images/nenek_profile_1784000277716.png" alt="Gallery 4" class="gallery-item"
+                        onclick="openModal(this.src)">
+                </div>
+            </section>
+
+        </div> <!-- End container -->
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <h2 class="footer-title">Thank You</h2>
+            <p class="footer-text">It is an honor and happiness for us if you are willing to attend and give us your
+                blessing.</p>
+            <p class="footer-sign">Best Regards,<br><strong>Liem Ping Tien & Tan Mei Hwa</strong></p>
+
+            <div class="copyright">
+                <p>MADE BY <span><i class="fas fa-heart"></i> M.I.</span></p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
