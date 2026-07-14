@@ -96,13 +96,6 @@ const observer = new IntersectionObserver((entries, observer) => {
 document.addEventListener('DOMContentLoaded', () => {
     const animElements = document.querySelectorAll('.slide-up-anim');
     animElements.forEach(el => observer.observe(el));
-
-    // Set guest name from URL parameter if available (?to=Guest+Name)
-    const urlParams = new URLSearchParams(window.location.search);
-    const guestName = urlParams.get('to');
-    if (guestName) {
-        document.getElementById('guest-name').innerText = guestName;
-    }
 });
 
 // Gallery Modal functions
@@ -125,17 +118,9 @@ modal.addEventListener('click', (e) => {
     }
 });
 
-// Wishes Form Logic
-function addWish(event) {
-    event.preventDefault();
-
-    const name = document.getElementById('wish-name').value;
-    const msg = document.getElementById('wish-msg').value;
-
-    if (!name || !msg) return;
-
+// Wishes Form Logic - Moved to handle UI update after Supabase success
+function addWishToDOM(name, msg) {
     const list = document.getElementById('wishes-list');
-
     const div = document.createElement('div');
     div.className = 'wish-item';
 
@@ -155,7 +140,119 @@ function addWish(event) {
 
     // Add to top of list
     list.insertBefore(div, list.firstChild);
-
-    // Reset form
-    event.target.reset();
 }
+
+// Inisialisasi Supabase
+const SUPABASE_URL = "https://omzgahymdhnyfdikikvj.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9temdhaHltZGhueWZkaWtpa3ZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM5OTU5ODksImV4cCI6MjA5OTU3MTk4OX0.8LYdQme-8nH6dys1TcgK9KFwdA--orzZy7rLVLDYdeM";
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+// 1. LOGIKA UNTUK SUBMIT RSVP
+const rsvpForm = document.getElementById('rsvp-form');
+rsvpForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = rsvpForm.querySelector('button');
+    const originalText = btn.textContent;
+    btn.textContent = "Sending...";
+    btn.disabled = true;
+
+    const { data, error } = await supabaseClient
+        .from('rsvp')
+        .insert([
+            {
+                name: document.getElementById('rsvp-name').value,
+                number_of_guest: parseInt(document.getElementById('rsvp-guests').value),
+                attendance: document.querySelector('input[name="attendance"]:checked').value === 'yes'
+            }
+        ]);
+
+    btn.disabled = false;
+    btn.textContent = originalText;
+
+    if (error) {
+        alert("Error dari Supabase: " + error.message + "\nDetail: " + (error.details || ""));
+        console.error("Supabase Error Object:", error);
+    } else {
+        alert("Thank you for your RSVP!");
+        rsvpForm.reset();
+    }
+});
+
+// 2. LOGIKA UNTUK SUBMIT WISH
+const wishForm = document.getElementById('wishes-form');
+wishForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const nameInput = document.getElementById('wish-name').value;
+    const wishInput = document.getElementById('wish-text').value;
+    const btn = wishForm.querySelector('button');
+    const originalText = btn.textContent;
+
+    btn.textContent = "Submitting...";
+    btn.disabled = true;
+
+    const { data, error } = await supabaseClient
+        .from('wishes')
+        .insert([
+            {
+                name: nameInput,
+                wish: wishInput
+            }
+        ]);
+
+    btn.disabled = false;
+    btn.textContent = originalText;
+
+    if (error) {
+        alert("Error dari Supabase: " + error.message + "\nDetail: " + (error.details || ""));
+        console.error("Supabase Error Object:", error);
+    } else {
+        addWishToDOM(nameInput, wishInput);
+        wishForm.reset();
+    }
+});
+
+async function getWishes() {
+    const { data: wishes, error } = await supabaseClient
+        .from('wishes')
+        .select('*')
+        .order('created_at', { ascending: false }); // Urutkan dari yang paling baru
+
+    if (wishes) {
+        const list = document.getElementById('wishes-list');
+        list.innerHTML = ''; // Bersihkan ucapan bawaan (dummy)
+
+        wishes.forEach(item => {
+            const date = new Date(item.created_at);
+            // Format waktu menjadi (cth: 15 Nov 2026, 10:00)
+            const timeString = date.toLocaleDateString('id-ID', {
+                day: 'numeric', month: 'short', year: 'numeric',
+                hour: '2-digit', minute: '2-digit'
+            });
+
+            const div = document.createElement('div');
+            div.className = 'wish-item';
+
+            const h4 = document.createElement('h4');
+            h4.textContent = item.name;
+
+            const p = document.createElement('p');
+            p.textContent = item.wish;
+
+            const span = document.createElement('span');
+            span.className = 'wish-time';
+            span.textContent = timeString;
+
+            div.appendChild(h4);
+            div.appendChild(p);
+            div.appendChild(span);
+
+            // Tambahkan ke dalam list
+            list.appendChild(div);
+        });
+    } else if (error) {
+        console.error("Failed to load wishes:", error);
+    }
+}
+
+// Panggil fungsi getWishes saat halaman dimuat
+getWishes();

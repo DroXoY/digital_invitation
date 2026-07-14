@@ -14,6 +14,8 @@
         rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body>
@@ -195,32 +197,32 @@
                 <div class="rsvp-card">
                     <h2 class="section-title">RSVP & WISHES</h2>
 
-                    <form class="rsvp-form" onsubmit="event.preventDefault();">
+                    <form id="rsvp-form" class="rsvp-form">
                         <div class="form-group">
-                            <input type="text" placeholder="Name" required>
+                            <input type="text" id="rsvp-name" placeholder="Name" required>
                         </div>
                         <div class="form-group">
-                            <select required>
+                            <select id="rsvp-guests" required>
                                 <option value="" disabled selected>Number of Guest</option>
                                 <option value="1">1 Person</option>
                                 <option value="2">2 Persons</option>
                             </select>
                         </div>
                         <div class="form-group radio-group">
-                            <label><input type="radio" name="attend" value="yes" checked> Yes, I will attend</label>
-                            <label><input type="radio" name="attend" value="no"> Sorry, I can't attend</label>
+                            <label><input type="radio" name="attendance" value="yes" checked> Yes, I will attend</label>
+                            <label><input type="radio" name="attendance" value="no"> Sorry, I can't attend</label>
                         </div>
                         <button type="submit" class="btn-primary w-100">Send RSVP</button>
                     </form>
 
                     <hr class="divider">
 
-                    <form class="wishes-form" onsubmit="addWish(event)">
+                    <form id="wishes-form" class="wishes-form">
                         <div class="form-group">
                             <input type="text" id="wish-name" placeholder="Name" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="wish-msg" placeholder="Write your wishes..." rows="4" required></textarea>
+                            <textarea id="wish-text" placeholder="Write your wishes..." rows="4" required></textarea>
                         </div>
                         <button type="submit" class="btn-primary w-100">Submit Wish</button>
                     </form>
@@ -229,7 +231,7 @@
                         <!-- Wishes will be appended here -->
                         <div class="wish-item">
                             <h4>Keluarga Besar</h4>
-                            <p>Happy 60th Anniversary Kakek & Nenek! Semoga sehat selalu dan bahagia selamanya.</p>
+                            <p>Happy 60th Anniversary Engkong dan Emak! Semoga sehat selalu dan bahagia selamanya.</p>
                             <span class="wish-time">Just now</span>
                         </div>
                     </div>
