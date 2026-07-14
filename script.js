@@ -30,7 +30,7 @@ openBtn.addEventListener('click', () => {
     setTimeout(() => {
         gate.style.display = 'none';
         window.scrollTo(0, 0); // Reset scroll to top
-    }, 1000);
+    }, 2500);
 });
 
 // Music Toggle

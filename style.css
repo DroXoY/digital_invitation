@@ -238,7 +238,7 @@ h4 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1), opacity 1s ease;
+    transition: transform 2.5s cubic-bezier(0.65, 0, 0.35, 1), opacity 2.5s ease;
 }
 
 .gate-overlay {
@@ -334,7 +334,7 @@ h1.gate-title:last-of-type {
     pointer-events: auto;
     height: auto;
     overflow: visible;
-    animation: fadeIn 1s ease 0.5s forwards;
+    animation: fadeIn 2s ease 0.5s forwards;
 }
 
 @keyframes fadeIn {
@@ -893,7 +893,7 @@ h1.hero-title:last-of-type {
 .slide-up-anim {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 1.8s ease-out, transform 1.8s ease-out;
 }
 
 .slide-up-anim.visible {
