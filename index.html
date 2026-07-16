@@ -116,7 +116,7 @@
             <!-- Profiles Section -->
             <section class="profiles-section">
                 <!-- Kakek Profile -->
-                <div class="profile-card slide-up-anim">
+                <div class="profile-card slide-in-left-anim">
                     <div class="profile-bg-left"></div>
                     <div class="profile-details">
                         <img src="images/1-2.jpg" alt="Kakek" class="profile-img">
@@ -125,7 +125,7 @@
                 </div>
 
                 <!-- Nenek Profile -->
-                <div class="profile-card reverse slide-up-anim">
+                <div class="profile-card reverse slide-in-right-anim">
                     <div class="profile-bg-right"></div>
                     <div class="profile-details">
                         <img src="images/1-1.jpg" alt="Nenek" class="profile-img">
@@ -220,17 +220,15 @@
 
                     <form id="rsvp-form" class="rsvp-form">
                         <div class="form-group">
+                            <label for="rsvp-name">Name:</label>
                             <input type="text" id="rsvp-name" placeholder="Name" required>
                         </div>
                         <div class="form-group">
-                            <select id="rsvp-guests" required>
-                                <option value="" disabled selected>Number of Guest</option>
-                                <option value="1">1 Person</option>
-                                <option value="2">2 Persons</option>
-                            </select>
+                            <label for="rsvp-guests">Number of guests:</label>
+                            <input type="text" id="rsvp-guests" value="2" disabled>
                         </div>
                         <div class="form-group radio-group">
-                            <label><input type="radio" name="attendance" value="yes" checked> Yes, I will attend</label>
+                            <label><input type="radio" name="attendance" value="yes"> Yes, I will attend</label>
                             <label><input type="radio" name="attendance" value="no"> Sorry, I can't attend</label>
                         </div>
                         <button type="submit" class="btn-primary w-100">
@@ -271,24 +269,14 @@
             <section class="gallery-section slide-up-anim">
                 <h2 class="section-title text-center">OUR GALLERY</h2>
                 <div class="gallery-grid">
-                    <img src="images/1.jpeg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/1.png" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/2.jpeg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/2.png" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/3.jpeg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/3.jpg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/3.png" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/4.jpeg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/4.jpg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/4.png" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/5.jpeg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/5.png" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/6.jpeg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/6.png" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/7.jpg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/7.png" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
-                    <img src="images/9.jpg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
                     <img src="images/cover_depan.png" alt="Gallery Image" class="gallery-item"
+                        onclick="openModal(this.src)">
+                    <img src="images/7.jpg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
+                    <img src="images/1.png" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
+                    <img src="images/3.jpg" alt="Gallery Image" class="gallery-item" onclick="openModal(this.src)">
+                    <img src="images/dari-mama.jpeg" alt="Gallery Image" class="gallery-item"
+                        onclick="openModal(this.src)">
+                    <img src="images/dari-mama-lagi.jpeg" alt="Gallery Image" class="gallery-item"
                         onclick="openModal(this.src)">
                 </div>
             </section>

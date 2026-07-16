@@ -108,7 +108,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, observerOptions);
 
 document.addEventListener('DOMContentLoaded', () => {
-    const animElements = document.querySelectorAll('.slide-up-anim');
+    const animElements = document.querySelectorAll('.slide-up-anim, .slide-in-left-anim, .slide-in-right-anim');
     animElements.forEach(el => observer.observe(el));
 
     // Set guest name from URL parameter if available (?to=Guest+Name)
@@ -183,7 +183,7 @@ rsvpForm.addEventListener('submit', async (e) => {
         .insert([
             {
                 name: document.getElementById('rsvp-name').value,
-                number_of_guest: parseInt(document.getElementById('rsvp-guests').value),
+                number_of_guest: document.querySelector('input[name="attendance"]:checked').value === 'yes' ? 2 : 0,
                 attendance: document.querySelector('input[name="attendance"]:checked').value === 'yes'
             }
         ]);
